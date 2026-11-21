@@ -7,7 +7,7 @@ import { WelcomeScreen } from '../components/WelcomeScreen';
 import { LetterSection } from '../components/LetterSection';
 import { InteractiveCards } from '../components/InteractiveCards';
 import { CatUniverse } from '../components/CatUniverse';
-import { ChampakGarden } from '../components/ChampakGarden';
+import { ChafaGarden } from '../components/ChafaGarden';
 import { ColorPopGame } from '../components/ColorPopGame';
 import { SurpriseGenerator } from '../components/SurpriseGenerator';
 import { FinalScreen } from '../components/FinalScreen';
@@ -60,7 +60,7 @@ export function HomePage() {
             <LetterSection />
             <InteractiveCards />
             <CatUniverse />
-            <ChampakGarden />
+            <ChafaGarden />
             <ColorPopGame />
             <SurpriseGenerator />
             <FinalScreen />

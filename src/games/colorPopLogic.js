@@ -304,7 +304,7 @@ export function resolveClearAndRefill(grid, cellsToClear, colorCount) {
  * Computes which cells a Power-Up clears when used on (targetR, targetC).
  * - pawBomb: 3x3 surrounding area (clears bubbles & frost, leaves stones intact)
  * - sunshineBlast: ALL bubbles of the selected bubble's color across the entire board
- * - champakBloom: full cross (+) + petal diagonals (radius 2 in cardinal + 1 in diagonal)
+ * - chafaBloom: full cross (+) + petal diagonals (radius 2 in cardinal + 1 in diagonal)
  */
 export function getPowerUpTargets(grid, powerUpType, targetR, targetC) {
   const rows = grid.length;
@@ -340,7 +340,7 @@ export function getPowerUpTargets(grid, powerUpType, targetR, targetC) {
         }
       }
     }
-  } else if (powerUpType === 'champakBloom') {
+  } else if (powerUpType === 'chafaBloom') {
     // 5-petal flower burst: center + full row/col radius 2 + diagonal petals
     push(targetR, targetC);
     [

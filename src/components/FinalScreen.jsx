@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BookOpen, Sparkles } from 'lucide-react';
 import { FINAL_SCREEN_CONTENT } from '../config/messages';
 import { CatIllustration } from '../assets/CatIllustrations';
-import { ChampakFlower } from '../assets/ChampakFlowerSVG';
+import { ChafaFlower } from '../assets/ChafaFlowerSVG';
 import { RadiantSun, FluffyCloud, ButterflySVG } from '../assets/SceneDecorations';
 import { FloatingPetals } from '../animations/FloatingPetals';
 import { CelebrationBurst } from '../animations/CelebrationBurst';
@@ -23,7 +23,7 @@ export function FinalScreen() {
       id="final-screen"
       className="relative overflow-hidden pt-20 pb-20 px-4 bg-gradient-to-b from-[#A9DDF5] via-[#D9F0FF] to-[#FFF3B0]"
     >
-      {/* Floating yellow Champak petals */}
+      {/* Floating yellow Chafa petals */}
       <FloatingPetals count={celebrated ? 24 : 12} />
 
       {/* Top curved transition from cream */}
@@ -53,13 +53,13 @@ export function FinalScreen() {
       <div className="relative z-20 max-w-3xl mx-auto text-center">
         <CelebrationBurst active={celebrated} burstKey={burstKey} />
 
-        {/* Scene: Cute cat sitting beside a stack of books + Yellow Champak flowers */}
+        {/* Scene: Cute cat sitting beside a stack of books + Yellow Chafa flowers */}
         <div className="flex items-end justify-center gap-3 sm:gap-6 mb-6">
-          <ChampakFlower size={68} variant={0} />
+          <ChafaFlower size={68} variant={0} />
           <div className={celebrated ? 'animate-cat-jump' : 'animate-float-slow'}>
             <CatIllustration type="books" className="w-36 h-28 sm:w-44 sm:h-34 drop-shadow-sm" />
           </div>
-          <ChampakFlower size={64} variant={2} />
+          <ChafaFlower size={64} variant={2} />
         </div>
 
         {/* Intro Text */}
@@ -73,10 +73,10 @@ export function FinalScreen() {
         {/* Prominent Yellow Highlighted Study Reminder Card */}
         <div className="relative bg-[#FFD95A] rounded-[2.2rem] border-4 border-white shadow-xl p-6 sm:p-10 mb-8">
           <div className="pointer-events-none absolute -top-5 -left-4 hidden sm:block">
-            <ChampakFlower size={62} withStem={false} sway={false} />
+            <ChafaFlower size={62} withStem={false} sway={false} />
           </div>
           <div className="pointer-events-none absolute -bottom-5 -right-4 hidden sm:block">
-            <ChampakFlower size={62} withStem={false} sway={false} />
+            <ChafaFlower size={62} withStem={false} sway={false} />
           </div>
 
           <h2 className="font-storybook text-3xl sm:text-5xl font-extrabold text-[#2A3B4C] tracking-tight mb-5">

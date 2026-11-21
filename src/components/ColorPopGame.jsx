@@ -32,7 +32,7 @@ import { BUBBLE_COLORS } from '../config/colors';
 import { STORAGE_KEYS } from '../config/settings';
 import { loadFromStorage, saveToStorage } from '../utils/storage';
 import { CatIllustration } from '../assets/CatIllustrations';
-import { ChampakFlower } from '../assets/ChampakFlowerSVG';
+import { ChafaFlower } from '../assets/ChafaFlowerSVG';
 import { PawPrint } from '../assets/SceneDecorations';
 import { CelebrationBurst } from '../animations/CelebrationBurst';
 import { soundEngine } from '../utils/soundEngine';
@@ -98,7 +98,7 @@ export function ColorPopGame() {
   const [movesLeft, setMovesLeft] = useState(currentLevelObj.moves);
   const [streak, setStreak] = useState(0);
   const [powerUps, setPowerUps] = useState({ ...currentLevelObj.starterPowerUps });
-  const [armedPowerUp, setArmedPowerUp] = useState(null); // 'pawBomb' | 'sunshineBlast' | 'champakBloom' | null
+  const [armedPowerUp, setArmedPowerUp] = useState(null); // 'pawBomb' | 'sunshineBlast' | 'chafaBloom' | null
 
   const [status, setStatus] = useState('playing'); // 'playing' | 'paused' | 'won' | 'lost'
   const [poppingKeys, setPoppingKeys] = useState(new Set());
@@ -209,7 +209,7 @@ export function ColorPopGame() {
       setPoppingKeys(new Set(targets.map((t) => `${t.r},${t.c}`)));
       setPowerUps((prev) => ({ ...prev, [activeType]: Math.max(0, prev[activeType] - 1) }));
 
-      if (activeType === 'champakBloom') {
+      if (activeType === 'chafaBloom') {
         setBloomOverlay(true);
         setTimeout(() => setBloomOverlay(false), 750);
       }
@@ -235,7 +235,7 @@ export function ColorPopGame() {
             ? 'PAW BOMB BOOM!'
             : activeType === 'sunshineBlast'
             ? 'SUNSHINE BLAST!'
-            : 'CHAMPAK BLOOM!';
+            : 'CHAFA BLOOM!';
         setCheerText(`${label} +${gained} pts!`);
         setFloatingPopup({ id: Date.now(), text: `+${gained}`, sub: label });
 
@@ -298,7 +298,7 @@ export function ColorPopGame() {
       // Earn a free bonus power-up on 6+ cluster!
       let bonusText = '';
       if (cluster.length >= 6) {
-        const types = ['pawBomb', 'sunshineBlast', 'champakBloom'];
+        const types = ['pawBomb', 'sunshineBlast', 'chafaBloom'];
         const chosen = types[Math.floor(Math.random() * types.length)];
         setPowerUps((prev) => ({ ...prev, [chosen]: prev[chosen] + 1 }));
         bonusText = ' +1 Bonus Power-Up!';
@@ -356,9 +356,9 @@ export function ColorPopGame() {
 
         {/* Main Game Card */}
         <div className="relative bg-[#FFFDF3] rounded-[2.2rem] border-4 border-white shadow-xl p-4 sm:p-6 md:p-8 overflow-hidden">
-          {/* Decorative background paw prints & Champak corners */}
+          {/* Decorative background paw prints & Chafa corners */}
           <div className="pointer-events-none absolute -top-4 -left-4 opacity-40">
-            <ChampakFlower size={74} withStem={false} sway={false} />
+            <ChafaFlower size={74} withStem={false} sway={false} />
           </div>
           <div className="pointer-events-none absolute -bottom-3 -right-3 opacity-35">
             <PawPrint className="w-16 h-16" color="#A9DDF5" rotate={-20} />
@@ -536,10 +536,10 @@ export function ColorPopGame() {
             {/* Game Board Area */}
             <div className="lg:col-span-8 flex flex-col items-center">
               <div className="relative w-full max-w-[440px] rounded-[1.8rem] p-3 sm:p-4 bg-gradient-to-br from-[#D9F0FF]/80 via-[#FFFDF3] to-[#FFF3B0]/70 border-2 border-[#A9DDF5] shadow-inner">
-                {/* Champak Bloom visual flash */}
+                {/* Chafa Bloom visual flash */}
                 {bloomOverlay && (
                   <div className="pointer-events-none absolute inset-0 z-30 flex items-center justify-center bg-[#FFF3B0]/45 rounded-[1.6rem] animate-bloom">
-                    <ChampakFlower size={140} withStem={false} sway={false} />
+                    <ChafaFlower size={140} withStem={false} sway={false} />
                   </div>
                 )}
 
@@ -797,8 +797,8 @@ export function ColorPopGame() {
                       badgeBg: 'bg-[#FFD95A]',
                     },
                     {
-                      id: 'champakBloom',
-                      name: 'Champak Bloom',
+                      id: 'chafaBloom',
+                      name: 'Chafa Bloom',
                       desc: 'Flower-burst clears a big petal cross',
                       icon: Flower2,
                       badgeBg: 'bg-[#D9F0FF]',

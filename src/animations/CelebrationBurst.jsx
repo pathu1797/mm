@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { ChampakPetal } from '../assets/ChampakFlowerSVG';
+import { ChafaPetal } from '../assets/ChafaFlowerSVG';
 
 export function CelebrationBurst({ active, burstKey = 0 }) {
   const particles = useMemo(() => {
@@ -35,7 +35,7 @@ export function CelebrationBurst({ active, burstKey = 0 }) {
           }}
         >
           {p.isPetal ? (
-            <ChampakPetal className="w-5 h-7" />
+            <ChafaPetal className="w-5 h-7" />
           ) : (
             <svg viewBox="0 0 24 24" className="w-5 h-5">
               <path

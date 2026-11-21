@@ -312,18 +312,18 @@ function YarnCat({ className, animate }) {
   );
 }
 
-// 8. Cat Sleeping Under a Champak Tree (Champa)
+// 8. Cat Sleeping Under a Chafa Tree (Chafa)
 function TreeNapCat({ className, animate }) {
   return (
     <svg viewBox="0 0 150 130" className={className} aria-hidden="true">
       {/* Grass patch */}
       <ellipse cx="75" cy="112" rx="60" ry="12" fill="#BCE3BC" />
-      {/* Mini Champak branch arching over */}
+      {/* Mini Chafa branch arching over */}
       <path d="M18 110 Q14 48 56 26 Q86 16 118 28" fill="none" stroke="#8C6B4A" strokeWidth="8" strokeLinecap="round" />
       <ellipse cx="64" cy="24" rx="22" ry="12" fill="#67AD6E" />
       <ellipse cx="96" cy="24" rx="24" ry="13" fill="#589C60" />
       <ellipse cx="118" cy="34" rx="18" ry="11" fill="#74B97B" />
-      {/* Golden Champak blossoms hanging */}
+      {/* Golden Chafa blossoms hanging */}
       {[
         { x: 60, y: 26 },
         { x: 96, y: 22 },
@@ -496,7 +496,7 @@ function BooksCat({ className, animate }) {
         <circle cx="128" cy="59" r="3.8" fill="#2A3B4C" />
       </g>
       <path d="M115 68 Q120 72 125 68" fill="none" stroke="#2A3B4C" strokeWidth="2" strokeLinecap="round" />
-      {/* Mini Champak tucked behind ear */}
+      {/* Mini Chafa tucked behind ear */}
       <g transform="translate(136, 40) scale(0.32)">
         {[0, 72, 144, 216, 288].map((a) => (
           <ellipse key={a} rx="8" ry="24" fill="#FFD95A" transform={`rotate(${a}) translate(0 -12)`} />

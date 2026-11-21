@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { ChampakPetal } from '../assets/ChampakFlowerSVG';
+import { ChafaPetal } from '../assets/ChafaFlowerSVG';
 
 export function FloatingPetals({ count = 12, className = '' }) {
   const petals = useMemo(() => {
@@ -27,7 +27,7 @@ export function FloatingPetals({ count = 12, className = '' }) {
             animation: `petalFall ${petal.duration} linear ${petal.delay} infinite`,
           }}
         >
-          <ChampakPetal className={petal.size} rotate={petal.rotate} />
+          <ChafaPetal className={petal.size} rotate={petal.rotate} />
         </div>
       ))}
     </div>

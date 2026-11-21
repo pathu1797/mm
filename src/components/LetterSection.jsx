@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { Smile, FastForward, RotateCcw } from 'lucide-react';
 import { LETTER_CONTENT } from '../config/messages';
 import { DEFAULT_SETTINGS } from '../config/settings';
-import { ChampakFlower } from '../assets/ChampakFlowerSVG';
+import { ChafaFlower } from '../assets/ChafaFlowerSVG';
 import { PawPrint } from '../assets/SceneDecorations';
 import { CatIllustration } from '../assets/CatIllustrations';
 import { CelebrationBurst } from '../animations/CelebrationBurst';
@@ -90,7 +90,7 @@ export function LetterSection() {
 
           {/* Corner floral & paw accents */}
           <div className="pointer-events-none absolute -top-3 -right-3 opacity-85">
-            <ChampakFlower size={68} withStem={false} sway={false} />
+            <ChafaFlower size={68} withStem={false} sway={false} />
           </div>
           <div className="pointer-events-none absolute bottom-4 left-4 opacity-35">
             <PawPrint className="w-10 h-10" color="#A9DDF5" rotate={-18} />

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, Home } from 'lucide-react';
 import { NAV_SECTIONS } from '../config/settings';
 import { SoundToggle } from './SoundToggle';
-import { ChampakFlower } from '../assets/ChampakFlowerSVG';
+import { ChafaFlower } from '../assets/ChafaFlowerSVG';
 
 export function Navbar({ soundEnabled, onToggleSound, onGoHome }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -57,7 +57,7 @@ export function Navbar({ soundEnabled, onToggleSound, onGoHome }) {
           className="flex items-center gap-2 text-left group cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#3A7CA5] rounded-xl px-1.5 py-1"
           aria-label="Go to Home - A Little Place for MM"
         >
-          <ChampakFlower size={30} withStem={false} sway={false} className="transition-transform group-hover:rotate-12" />
+          <ChafaFlower size={30} withStem={false} sway={false} className="transition-transform group-hover:rotate-12" />
           <div className="leading-tight">
             <span className="font-storybook text-base sm:text-lg font-bold text-[#2A3B4C] block">
               A Little Place for MM

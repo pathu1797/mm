@@ -127,7 +127,7 @@ export function AnimatedEnvelope({ isOpen = false, className = 'w-48 h-36' }) {
         />
       </g>
 
-      {/* Golden Champak seal */}
+      {/* Golden Chafa seal */}
       <g
         style={{
           opacity: isOpen ? 0 : 1,

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Smile, Wind, Cat, Sun, RefreshCw, Play, Pause, Sparkles, ArrowDown } from 'lucide-react';
 import { NEED_RIGHT_NOW } from '../config/messages';
 import { CatIllustration } from '../assets/CatIllustrations';
-import { ChampakFlower } from '../assets/ChampakFlowerSVG';
+import { ChafaFlower } from '../assets/ChafaFlowerSVG';
 import { FluffyCloud, ButterflySVG, RadiantSun } from '../assets/SceneDecorations';
 import { soundEngine } from '../utils/soundEngine';
 
@@ -18,7 +18,7 @@ const MINI_ZONE_CATS = [
   { type: 'white', name: 'Cloud', msg: 'Fluff level: 1000%. Sending cozy vibes!' },
   { type: 'orange', name: 'Marmalade', msg: 'Mrrrow! Orange cats declare today a happy day!' },
   { type: 'mischievous', name: 'Noodle', msg: 'Hehe! Bet I made you grin, MM!' },
-  { type: 'butterfly', name: 'Sunny', msg: 'Chasing butterflies in the Champak breeze!' },
+  { type: 'butterfly', name: 'Sunny', msg: 'Chasing butterflies in the Chafa breeze!' },
   { type: 'yarn', name: 'Tangle', msg: 'Look! I tied a blue yarn bow for MM!' },
 ];
 
@@ -200,11 +200,11 @@ export function InteractiveCards() {
               </div>
             </div>
 
-            {/* Peaceful mini Champak garden silhouette along bottom + controls */}
+            {/* Peaceful mini Chafa garden silhouette along bottom + controls */}
             <div className="relative z-10 flex items-center justify-between gap-2">
               <div className="flex items-end gap-1 pointer-events-none" aria-hidden="true">
-                <ChampakFlower size={34} variant={0} />
-                <ChampakFlower size={28} variant={2} />
+                <ChafaFlower size={34} variant={0} />
+                <ChafaFlower size={28} variant={2} />
               </div>
 
               <div className="flex items-center gap-2">
@@ -325,13 +325,13 @@ export function InteractiveCards() {
                 </span>
               </div>
 
-              {/* Illuminated Compliment Display with Yellow Champak */}
+              {/* Illuminated Compliment Display with Yellow Chafa */}
               <div
                 key={sunshineAnimKey}
                 className="rounded-3xl bg-white/90 border border-[#FFD95A] p-6 text-center shadow-xs mb-6 animate-bloom"
               >
                 <div className="flex justify-center mb-3">
-                  <ChampakFlower size={62} variant={sunshineIdx % 3} withStem={false} />
+                  <ChafaFlower size={62} variant={sunshineIdx % 3} withStem={false} />
                 </div>
                 <p className="font-storybook text-lg sm:text-xl font-bold text-[#2A3B4C] leading-relaxed">
                   {NEED_RIGHT_NOW.sunshineCompliments[sunshineIdx]}

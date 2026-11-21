@@ -36,7 +36,7 @@ export function getStarRating(score, starThresholds) {
 }
 
 export function getCheerMessage(matchedCount) {
-  if (matchedCount >= 9) return 'MEGA CHAMPAK POP!!';
+  if (matchedCount >= 9) return 'MEGA CHAFA POP!!';
   if (matchedCount >= 7) return 'SUNSHINE SUPERSTAR, MM!';
   if (matchedCount >= 5) return 'PAW-SOME COMBO!';
   if (matchedCount === 4) return 'SUNNY POP!';

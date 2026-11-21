@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Sparkles, Gift } from 'lucide-react';
 import { SURPRISE_ITEMS } from '../config/messages';
 import { CatIllustration } from '../assets/CatIllustrations';
-import { ChampakFlower } from '../assets/ChampakFlowerSVG';
+import { ChafaFlower } from '../assets/ChafaFlowerSVG';
 import { RadiantSun, ButterflySVG, PawPrint } from '../assets/SceneDecorations';
 import { CelebrationBurst } from '../animations/CelebrationBurst';
 import { soundEngine } from '../utils/soundEngine';
@@ -10,7 +10,7 @@ import { soundEngine } from '../utils/soundEngine';
 const SURPRISE_TYPES = [
   'cat',
   'quote',
-  'champak',
+  'chafa',
   'joke',
   'sunshine',
   'catFact',
@@ -66,11 +66,11 @@ export function SurpriseGenerator() {
         soundEngine.playBloom();
         break;
       }
-      case 'champak': {
+      case 'chafa': {
         payload = {
-          badge: 'Blooming Champak',
+          badge: 'Blooming Chafa',
           variant: Math.floor(Math.random() * 3),
-          title: 'A fresh yellow Champak just opened for MM!',
+          title: 'A fresh yellow Chafa just opened for MM!',
           body: 'Imagine that warm golden fragrance drifting on a sunny afternoon breeze.',
         };
         soundEngine.playBloom();
@@ -160,7 +160,7 @@ export function SurpriseGenerator() {
                 Ready for a tiny surprise, MM?
               </p>
               <p className="text-sm font-semibold text-[#536A7E] mt-1">
-                Cats, blooming Champak flowers, jokes, butterflies, sunshine & more!
+                Cats, blooming Chafa flowers, jokes, butterflies, sunshine & more!
               </p>
             </div>
           ) : (
@@ -177,9 +177,9 @@ export function SurpriseGenerator() {
                   </div>
                 )}
 
-                {currentSurprise.type === 'champak' && (
+                {currentSurprise.type === 'chafa' && (
                   <div className="animate-bloom">
-                    <ChampakFlower size={102} variant={currentSurprise.variant} />
+                    <ChafaFlower size={102} variant={currentSurprise.variant} />
                   </div>
                 )}
 
@@ -219,7 +219,7 @@ export function SurpriseGenerator() {
                   currentSurprise.type === 'joke' ||
                   currentSurprise.type === 'catFact') && (
                   <div className="flex items-center gap-3">
-                    <ChampakFlower size={54} withStem={false} sway={false} />
+                    <ChafaFlower size={54} withStem={false} sway={false} />
                     <CatIllustration
                       type={currentSurprise.type === 'joke' ? 'mischievous' : 'waving'}
                       className="w-24 h-24"

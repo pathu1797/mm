@@ -16,7 +16,7 @@ export const COLOR_POP_LEVELS = [
     targetScore: 450,
     starThresholds: [450, 750, 1100],
     obstacles: [],
-    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, champakBloom: 1 },
+    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, chafaBloom: 1 },
   },
   {
     id: 2,
@@ -29,11 +29,11 @@ export const COLOR_POP_LEVELS = [
     targetScore: 700,
     starThresholds: [700, 1100, 1550],
     obstacles: [],
-    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, champakBloom: 1 },
+    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, chafaBloom: 1 },
   },
   {
     id: 3,
-    name: 'Champak Morning',
+    name: 'Chafa Morning',
     subtitle: 'Clear the misty cloud tiles by popping right next to them!',
     rows: 7,
     cols: 7,
@@ -46,7 +46,7 @@ export const COLOR_POP_LEVELS = [
       { r: 3, c: 3, type: 'frost' },
       { r: 3, c: 4, type: 'frost' },
     ],
-    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, champakBloom: 1 },
+    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, chafaBloom: 1 },
   },
   {
     id: 4,
@@ -62,7 +62,7 @@ export const COLOR_POP_LEVELS = [
       { r: 2, c: 3, type: 'frost' },
       { r: 5, c: 3, type: 'frost' },
     ],
-    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, champakBloom: 1 },
+    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, chafaBloom: 1 },
   },
   {
     id: 5,
@@ -80,7 +80,7 @@ export const COLOR_POP_LEVELS = [
       { r: 4, c: 3, type: 'frost' },
       { r: 5, c: 3, type: 'frost' },
     ],
-    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, champakBloom: 1 },
+    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, chafaBloom: 1 },
   },
   {
     id: 6,
@@ -99,7 +99,7 @@ export const COLOR_POP_LEVELS = [
       { r: 4, c: 4, type: 'frost' },
       { r: 3, c: 3, type: 'stone' },
     ],
-    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, champakBloom: 1 },
+    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, chafaBloom: 1 },
   },
   {
     id: 7,
@@ -117,7 +117,7 @@ export const COLOR_POP_LEVELS = [
       { r: 5, c: 3, type: 'frost' },
       { r: 5, c: 4, type: 'frost' },
     ],
-    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, champakBloom: 1 },
+    starterPowerUps: { pawBomb: 1, sunshineBlast: 1, chafaBloom: 1 },
   },
   {
     id: 8,
@@ -139,7 +139,7 @@ export const COLOR_POP_LEVELS = [
       { r: 4, c: 3, type: 'frost' },
       { r: 4, c: 4, type: 'frost' },
     ],
-    starterPowerUps: { pawBomb: 2, sunshineBlast: 1, champakBloom: 1 },
+    starterPowerUps: { pawBomb: 2, sunshineBlast: 1, chafaBloom: 1 },
   },
   {
     id: 9,
@@ -161,11 +161,11 @@ export const COLOR_POP_LEVELS = [
       { r: 6, c: 2, type: 'frost' },
       { r: 6, c: 5, type: 'frost' },
     ],
-    starterPowerUps: { pawBomb: 2, sunshineBlast: 1, champakBloom: 2 },
+    starterPowerUps: { pawBomb: 2, sunshineBlast: 1, chafaBloom: 2 },
   },
   {
     id: 10,
-    name: 'Grand Champak Festival',
+    name: 'Grand Chafa Festival',
     subtitle: 'The ultimate sunshine puzzle challenge for MM!',
     rows: 8,
     cols: 8,
@@ -187,6 +187,6 @@ export const COLOR_POP_LEVELS = [
       { r: 6, c: 3, type: 'frost' },
       { r: 6, c: 4, type: 'frost' },
     ],
-    starterPowerUps: { pawBomb: 2, sunshineBlast: 2, champakBloom: 2 },
+    starterPowerUps: { pawBomb: 2, sunshineBlast: 2, chafaBloom: 2 },
   },
 ];

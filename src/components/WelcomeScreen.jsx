@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Sparkles, ChevronDown } from 'lucide-react';
 import { WELCOME_MESSAGES } from '../config/messages';
 import { CatIllustration } from '../assets/CatIllustrations';
-import { ChampakFlower } from '../assets/ChampakFlowerSVG';
+import { ChafaFlower } from '../assets/ChafaFlowerSVG';
 import { RadiantSun, FluffyCloud, PawPrint, AnimatedEnvelope, ButterflySVG } from '../assets/SceneDecorations';
 import { FloatingPetals } from '../animations/FloatingPetals';
 import { CelebrationBurst } from '../animations/CelebrationBurst';
@@ -35,7 +35,7 @@ export function WelcomeScreen({ isEntered, onOpenSurprise, soundEnabled, onToggl
       id="home"
       className="relative min-h-[94vh] flex flex-col items-center justify-center overflow-hidden px-4 py-12 bg-gradient-to-b from-[#A9DDF5] via-[#D9F0FF] to-[#FFF3B0]"
     >
-      {/* Floating Champak Petals */}
+      {/* Floating Chafa Petals */}
       <FloatingPetals count={14} />
 
       {/* Top right sound toggle when on initial welcome overlay */}
@@ -85,16 +85,16 @@ export function WelcomeScreen({ isEntered, onOpenSurprise, soundEnabled, onToggl
       <div className="relative z-20 max-w-2xl w-full bg-[#FFFDF3]/92 backdrop-blur-sm rounded-[2rem] border-2 border-[#FFFFFF] shadow-xl p-6 sm:p-10 text-center">
         <CelebrationBurst active={opening} burstKey={burstKey} />
 
-        {/* Scene: Cute Animated Cat sitting beside a Yellow Champak Flower */}
+        {/* Scene: Cute Animated Cat sitting beside a Yellow Chafa Flower */}
         <div className="flex items-end justify-center gap-3 sm:gap-5 mb-5">
           <div className="transform -translate-y-1">
-            <ChampakFlower size={74} variant={1} />
+            <ChafaFlower size={74} variant={1} />
           </div>
           <div className={opening ? 'animate-cat-jump' : 'animate-float-slow'}>
             <CatIllustration type="waving" className="w-28 h-28 sm:w-32 sm:h-32 drop-shadow-sm" />
           </div>
           <div className="transform -translate-y-1 hidden sm:block">
-            <ChampakFlower size={66} variant={2} />
+            <ChafaFlower size={66} variant={2} />
           </div>
         </div>
 

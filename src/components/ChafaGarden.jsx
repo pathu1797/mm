@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Sparkles, RotateCcw } from 'lucide-react';
-import { CHAMPAK_GARDEN_MESSAGES } from '../config/messages';
+import { CHAFA_GARDEN_MESSAGES } from '../config/messages';
 import { STORAGE_KEYS, DEFAULT_SETTINGS } from '../config/settings';
 import { loadFromStorage, saveToStorage } from '../utils/storage';
-import { ChampakFlower } from '../assets/ChampakFlowerSVG';
+import { ChafaFlower } from '../assets/ChafaFlowerSVG';
 import { CatIllustration } from '../assets/CatIllustrations';
 import { RadiantSun, FluffyCloud, ButterflySVG } from '../assets/SceneDecorations';
 import { FloatingPetals } from '../animations/FloatingPetals';
@@ -25,11 +25,11 @@ const GARDEN_SPOTS = [
   { x: 30, y: 84, scale: 1.08 }, { x: 66, y: 86, scale: 1.1 }, { x: 94, y: 84, scale: 1.06 },
 ];
 
-export function ChampakGarden() {
+export function ChafaGarden() {
   const [flowers, setFlowers] = useState(() =>
     loadFromStorage(STORAGE_KEYS.GARDEN_FLOWERS, [])
   );
-  const [activeNote, setActiveNote] = useState(CHAMPAK_GARDEN_MESSAGES.initialQuote);
+  const [activeNote, setActiveNote] = useState(CHAFA_GARDEN_MESSAGES.initialQuote);
   const [noteKey, setNoteKey] = useState(0);
   const [pettingCat, setPettingCat] = useState(null);
 
@@ -40,7 +40,7 @@ export function ChampakGarden() {
   const plantFlower = () => {
     if (flowers.length >= DEFAULT_SETTINGS.maxGardenFlowers) {
       setActiveNote(
-        'Your Champak meadow is in full golden bloom, MM! Tap any flower to read its cheerful note.'
+        'Your Chafa meadow is in full golden bloom, MM! Tap any flower to read its cheerful note.'
       );
       setNoteKey((k) => k + 1);
       soundEngine.playBloom();
@@ -49,8 +49,8 @@ export function ChampakGarden() {
 
     const spot = GARDEN_SPOTS[flowers.length % GARDEN_SPOTS.length];
     const message =
-      CHAMPAK_GARDEN_MESSAGES.flowerNotes[
-        flowers.length % CHAMPAK_GARDEN_MESSAGES.flowerNotes.length
+      CHAFA_GARDEN_MESSAGES.flowerNotes[
+        flowers.length % CHAFA_GARDEN_MESSAGES.flowerNotes.length
       ];
 
     const newFlower = {
@@ -76,7 +76,7 @@ export function ChampakGarden() {
 
   const handleResetGarden = () => {
     setFlowers([]);
-    setActiveNote(CHAMPAK_GARDEN_MESSAGES.initialQuote);
+    setActiveNote(CHAFA_GARDEN_MESSAGES.initialQuote);
     setNoteKey((k) => k + 1);
     soundEngine.playSoftClick();
   };
@@ -104,10 +104,10 @@ export function ChampakGarden() {
             Interactive Meadow
           </span>
           <h2 className="font-storybook text-3xl sm:text-4xl font-bold text-[#2A3B4C] mb-3">
-            {CHAMPAK_GARDEN_MESSAGES.heading}
+            {CHAFA_GARDEN_MESSAGES.heading}
           </h2>
           <p className="text-base sm:text-lg font-bold text-[#3A7CA5]">
-            “{CHAMPAK_GARDEN_MESSAGES.initialQuote}”
+            “{CHAFA_GARDEN_MESSAGES.initialQuote}”
           </p>
         </div>
 
@@ -122,7 +122,7 @@ export function ChampakGarden() {
           </p>
         </div>
 
-        {/* Interactive Champak Garden Canvas */}
+        {/* Interactive Chafa Garden Canvas */}
         <div className="relative rounded-[2.2rem] overflow-hidden border-4 border-white shadow-xl bg-gradient-to-b from-[#A9DDF5] via-[#D9F0FF] to-[#E6F4D7] min-h-[400px] sm:min-h-[470px] select-none">
           {/* Drifting petals */}
           <FloatingPetals count={flowers.length > 0 ? Math.min(18, 6 + flowers.length) : 5} />
@@ -170,7 +170,7 @@ export function ChampakGarden() {
             <div className="absolute inset-x-0 top-[44%] flex justify-center z-20 px-4">
               <div className="bg-[#FFFDF3]/92 backdrop-blur-xs border-2 border-[#FFF3B0] rounded-2xl px-5 py-3 shadow-sm text-center max-w-sm">
                 <p className="font-storybook text-sm sm:text-base font-bold text-[#2A3B4C]">
-                  This quiet meadow is waiting for its very first golden Champak bloom, MM!
+                  This quiet meadow is waiting for its very first golden Chafa bloom, MM!
                 </p>
               </div>
             </div>
@@ -181,7 +181,7 @@ export function ChampakGarden() {
           <button
             type="button"
             onClick={() =>
-              handleGardenCatTap('cat-sleep', 'Mochi enjoys napping in the warm Champak sunshine!')
+              handleGardenCatTap('cat-sleep', 'Mochi enjoys napping in the warm Chafa sunshine!')
             }
             aria-label="Pet sleeping cat in the garden"
             className={`absolute bottom-[10%] left-[6%] sm:left-[8%] z-20 cursor-pointer focus:outline-none ${
@@ -196,7 +196,7 @@ export function ChampakGarden() {
             <button
               type="button"
               onClick={() =>
-                handleGardenCatTap('cat-butter', 'Sunny spotted a butterfly dancing above your Champak flowers!')
+                handleGardenCatTap('cat-butter', 'Sunny spotted a butterfly dancing above your Chafa flowers!')
               }
               aria-label="Pet butterfly-chasing cat in the garden"
               className={`absolute bottom-[14%] right-[7%] sm:right-[10%] z-20 cursor-pointer focus:outline-none animate-bloom ${
@@ -223,13 +223,13 @@ export function ChampakGarden() {
             </button>
           )}
 
-          {/* Planted Yellow Champak Flowers */}
+          {/* Planted Yellow Chafa Flowers */}
           {sortedFlowers.map((flower) => (
             <button
               key={flower.id}
               type="button"
               onClick={() => handleFlowerTap(flower)}
-              aria-label={`Champak flower: ${flower.message}`}
+              aria-label={`Chafa flower: ${flower.message}`}
               title="Tap to read this flower's note"
               className="absolute -translate-x-1/2 -translate-y-full cursor-pointer group focus:outline-none focus:ring-2 focus:ring-[#3A7CA5] rounded-full"
               style={{
@@ -239,7 +239,7 @@ export function ChampakGarden() {
               }}
             >
               <div className="animate-bloom">
-                <ChampakFlower
+                <ChafaFlower
                   size={Math.round(62 * flower.scale)}
                   variant={flower.variant}
                   sway
@@ -253,11 +253,11 @@ export function ChampakGarden() {
         {/* Garden Controls */}
         <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4 bg-white rounded-3xl border-2 border-[#FFF3B0] p-4 sm:px-6 shadow-sm">
           <div className="flex items-center gap-3">
-            <ChampakFlower size={36} withStem={false} sway={false} />
+            <ChafaFlower size={36} withStem={false} sway={false} />
             <div className="text-left">
               <p className="font-storybook text-base font-bold text-[#2A3B4C]">
                 {flowers.length}{' '}
-                {flowers.length === 1 ? 'Champak Flower' : 'Champak Flowers'} Planted
+                {flowers.length === 1 ? 'Chafa Flower' : 'Chafa Flowers'} Planted
               </p>
               <p className="text-xs font-semibold text-[#536A7E]">
                 Saved automatically for your next visit, MM!
@@ -284,7 +284,7 @@ export function ChampakGarden() {
               className="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-7 py-3 rounded-full bg-[#FFD95A] hover:bg-[#FFE37D] active:scale-95 text-[#2A3B4C] font-storybook text-lg font-bold border-2 border-[#E6B84A] shadow-md hover:shadow-lg transition-all cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#3A7CA5]"
             >
               <Sparkles className="w-5 h-5 text-[#8A6112]" />
-              <span>{CHAMPAK_GARDEN_MESSAGES.buttonText}</span>
+              <span>{CHAFA_GARDEN_MESSAGES.buttonText}</span>
             </button>
           </div>
         </div>
