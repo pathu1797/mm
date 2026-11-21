@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "./styles/animations.css";
+
+@layer base {
+  :root {
+    --font-heading: 'Fredoka', system-ui, -apple-system, sans-serif;
+    --font-body: 'Nunito', system-ui, -apple-system, sans-serif;
+    --font-hand: 'Caveat', cursive;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #FFFDF3;
+    color: #2A3B4C;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-storybook {
+    font-family: var(--font-heading);
+  }
+
+  .font-handwritten {
+    font-family: var(--font-hand);
+  }
+}
+
+/* Custom storybook scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFDF3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A9DDF5;
+  border-radius: 9999px;
+  border: 2px solid #FFFDF3;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FFD95A;
+}
