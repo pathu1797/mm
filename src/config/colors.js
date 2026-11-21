@@ -64,3 +64,55 @@ export const BUBBLE_COLORS = {
 };
 
 export const BUBBLE_COLOR_KEYS = ['yellow', 'blue', 'green', 'purple', 'orange'];
+
+// Connect puzzle pipe & node palette — vivid, glossy, zero red/pink!
+export const CONNECT_COLORS = {
+  yellow: {
+    id: 'yellow',
+    label: 'Sunshine',
+    stroke: '#FFD95A',
+    highlight: '#FFF6C4',
+    dark: '#C9961A',
+    cellBg: 'rgba(255, 217, 90, 0.22)',
+  },
+  blue: {
+    id: 'blue',
+    label: 'Sky',
+    stroke: '#4CC2FF',
+    highlight: '#C9EEFF',
+    dark: '#2283BF',
+    cellBg: 'rgba(76, 194, 255, 0.22)',
+  },
+  green: {
+    id: 'green',
+    label: 'Meadow',
+    stroke: '#5ED674',
+    highlight: '#CCF7D3',
+    dark: '#2B9442',
+    cellBg: 'rgba(94, 214, 116, 0.22)',
+  },
+  purple: {
+    id: 'purple',
+    label: 'Lavender',
+    stroke: '#B388FF',
+    highlight: '#E7D8FF',
+    dark: '#6F42C1',
+    cellBg: 'rgba(179, 136, 255, 0.22)',
+  },
+  orange: {
+    id: 'orange',
+    label: 'Apricot',
+    stroke: '#FFA742',
+    highlight: '#FFE1BD',
+    dark: '#CC6D0C',
+    cellBg: 'rgba(255, 167, 66, 0.22)',
+  },
+  teal: {
+    id: 'teal',
+    label: 'Lagoon',
+    stroke: '#3ED1C5',
+    highlight: '#C2F7F2',
+    dark: '#1C8F87',
+    cellBg: 'rgba(62, 209, 197, 0.22)',
+  },
+};

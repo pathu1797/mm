@@ -1,6 +1,7 @@
 export const STORAGE_KEYS = {
   GARDEN_FLOWERS: 'mm_place_garden_flowers_v1',
   COLOR_POP_PROGRESS: 'mm_place_color_pop_v1',
+  CONNECT_PROGRESS: 'mm_place_connect_v1',
   SOUND_ENABLED: 'mm_place_sound_enabled_v1',
   WELCOME_OPENED: 'mm_place_welcome_opened_v1',
 };
@@ -17,5 +18,6 @@ export const NAV_SECTIONS = [
   { id: 'cat-universe', label: 'Cat Universe' },
   { id: 'flower-garden', label: 'Flower Garden' },
   { id: 'color-pop', label: 'Color Pop' },
+  { id: 'color-connect', label: 'Connect' },
   { id: 'surprises', label: 'Surprises' },
 ];

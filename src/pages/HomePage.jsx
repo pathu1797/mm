@@ -9,6 +9,7 @@ import { InteractiveCards } from '../components/InteractiveCards';
 import { CatUniverse } from '../components/CatUniverse';
 import { ChafaGarden } from '../components/ChafaGarden';
 import { ColorPopGame } from '../components/ColorPopGame';
+import { ColorConnectGame } from '../components/ColorConnectGame';
 import { SurpriseGenerator } from '../components/SurpriseGenerator';
 import { FinalScreen } from '../components/FinalScreen';
 import { BackToTop } from '../components/BackToTop';
@@ -62,6 +63,7 @@ export function HomePage() {
             <CatUniverse />
             <ChafaGarden />
             <ColorPopGame />
+            <ColorConnectGame />
             <SurpriseGenerator />
             <FinalScreen />
           </>
